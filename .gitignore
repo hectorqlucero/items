@@ -3,6 +3,7 @@
 /checkouts
 config.clj
 /uploads
+/target
 profiles.clj
 pom.xml
 pom.xml.asc
