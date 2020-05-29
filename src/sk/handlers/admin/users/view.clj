@@ -78,30 +78,30 @@
 
 (defn users-view [title]
   (list
-   (anti-forgery-field)
-   (build-table
-     title 
-     "/admin/users" 
-     (list
-       [:th {:data-options "field:'username',sortable:true,fixed:false,width:100"} "Username"]
-       [:th {:data-options "field:'lastname',sortable:true,fixed:false,width:100"} "Last Name"]
-       [:th {:data-options "field:'firstname',sortable:true,fixed:true,width:100"} "First Name"]
-       [:th {:data-options "field:'dob_formatted',sortable:true,fixed:true,width:100"} "DOB"]
-       [:th {:data-options "field:'level',sortable:true,fixed:true,width:100"} "Level"]
-       [:th {:data-options "field:'active',sortable:true,fixed:false,width:100"} "Active?"]))
-   (list ;Here we build a toolbar without the New button - we don't want to create users
-     [:div#toolbar
-      [:a {:href         "javascript:void(0)"
-           :class        "easyui-linkbutton"
-           :data-options "iconCls: 'icon-edit',plain: true"
-           :onclick      "editItem({})"} "Edit"]
-      [:a {:href         "javascript:void(0)"
-           :class        "easyui-linkbutton"
-           :data-options "iconCls: 'icon-remove',plain: true"
-           :onclick      "deleteItem()"} "Remove"]
-      [:div {:style "float: right"}]])
-   (build-dialog title dialog-fields)
-   (build-dialog-buttons)))
+    (anti-forgery-field)
+    (build-table
+      title 
+      "/admin/users" 
+      (list
+        [:th {:data-options "field:'username',sortable:true,fixed:false,width:100"} "Username"]
+        [:th {:data-options "field:'lastname',sortable:true,fixed:false,width:100"} "Last Name"]
+        [:th {:data-options "field:'firstname',sortable:true,fixed:true,width:100"} "First Name"]
+        [:th {:data-options "field:'dob_formatted',sortable:true,fixed:true,width:100"} "DOB"]
+        [:th {:data-options "field:'level',sortable:true,fixed:true,width:100"} "Level"]
+        [:th {:data-options "field:'active',sortable:true,fixed:false,width:100"} "Active?"]))
+    (list ;Here we build a toolbar without the New button - we don't want to create users
+          [:div#toolbar
+           [:a {:href         "javascript:void(0)"
+                :class        "easyui-linkbutton"
+                :data-options "iconCls: 'icon-edit',plain: true"
+                :onclick      "editItem({})"} "Edit"]
+           [:a {:href         "javascript:void(0)"
+                :class        "easyui-linkbutton"
+                :data-options "iconCls: 'icon-remove',plain: true"
+                :onclick      "deleteItem()"} "Remove"]
+           [:div {:style "float: right"}]])
+    (build-dialog title dialog-fields)
+    (build-dialog-buttons)))
 
 (defn users-scripts []
   (include-js "/js/grid.js"))

@@ -17,7 +17,6 @@
        :class "easyui-textbox"
        :prompt "Level ex. Level 1"
        :data-options "label:'Level:',labelPosition:'top',required:true,width:'100%'"})
-
     (build-radio-buttons
       "Active?"
       (list
@@ -34,16 +33,16 @@
 
 (defn category-view [title]
   (list
-   (anti-forgery-field)
-   (build-table
-     title 
-     "/admin/category" 
-     (list
-       [:th {:data-options "field:'description',sortable:true,fixed:true,width:100"} "Level"]
-       [:th {:data-options "field:'active',sortable:true,width:100"} "Active?"]))
-   (build-toolbar)
-   (build-dialog title dialog-fields)
-   (build-dialog-buttons)))
+    (anti-forgery-field)
+    (build-table
+      title 
+      "/admin/category" 
+      (list
+        [:th {:data-options "field:'description',sortable:true,fixed:true,width:100"} "Level"]
+        [:th {:data-options "field:'active',sortable:true,width:100"} "Active?"]))
+    (build-toolbar)
+    (build-dialog title dialog-fields)
+    (build-dialog-buttons)))
 
 (defn category-scripts []
   (include-js "/js/grid.js"))

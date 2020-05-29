@@ -1,5 +1,7 @@
 (ns sk.layout
-  (:require [hiccup.page :refer [html5 include-css include-js]]
+  (:require [hiccup.page :refer [html5 
+                                 include-css 
+                                 include-js]]
             [sk.models.crud :refer [config]]
             [sk.models.util :refer [user-level]]))
 
@@ -26,7 +28,7 @@
       [:a.dropdown-item {:href "/admin/wishlist"} "Wishlist"]
       [:a.dropdown-item {:href "/admin/emergencies"} "Emergencies"]
       [:a.dropdown-item {:href "/admin/items"} "Items"])
-    :else "Ni madre"))
+    :else nil))
 
 (defn menus-private []
   (list

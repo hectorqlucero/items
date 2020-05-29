@@ -11,7 +11,7 @@
             [ring.middleware.session :refer :all]
             [ring.middleware.session.cookie :refer :all]
             [ring.util.anti-forgery :refer :all]
-            [sk.models.crud :refer [config db KEY]]
+            [sk.models.crud :refer [config KEY]]
             [sk.routes :refer [open-routes]]
             [sk.proutes :refer [proutes]])
   (:gen-class))

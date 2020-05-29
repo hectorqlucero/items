@@ -15,8 +15,7 @@
                                     Query 
                                     Save 
                                     Update]]
-            [sk.models.email :refer [host 
-                                     send-email]]
+            [sk.models.email :refer [host send-email]]
             [sk.models.util :refer [get-session-id
                                     get-reset-url
                                     check-token

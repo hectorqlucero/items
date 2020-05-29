@@ -2,8 +2,7 @@
   (:require [sk.models.crud :refer [db Query]]
             [sk.models.util :refer [get-session-id]]
             [sk.layout :refer [application]]
-            [sk.handlers.items.view :refer [items-view
-                                                  items-scripts]]))
+            [sk.handlers.items.view :refer [items-view items-scripts]]))
 
 (def head-sql
   "

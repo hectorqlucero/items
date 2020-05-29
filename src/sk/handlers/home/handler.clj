@@ -1,6 +1,5 @@
 (ns sk.handlers.home.handler
   (:require [cheshire.core :refer [generate-string]]
-            [hiccup.page :refer [html5]]
             [ring.util.anti-forgery :refer [anti-forgery-field]]
             [sk.models.crud :refer [db
                                     Query]]

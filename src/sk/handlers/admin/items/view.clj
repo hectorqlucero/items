@@ -5,8 +5,7 @@
                                     build-dialog
                                     build-dialog-buttons
                                     build-field
-                                    build-toolbar
-                                    build-radio-buttons]]))
+                                    build-toolbar]]))
 
 (def dialog-fields
   (list
@@ -17,28 +16,24 @@
        :class "easyui-textbox"
        :prompt "Description here..."
        :data-options "label:'Description:',labelPosition:'top',required:true,width:'100%'"})
-
     (build-field
       {:id "sdate"
        :name "sdate"
        :class "easyui-datebox"
        :prompt "mm/dd/yyyy"
        :data-options "label:'Start Date:',labelPosition:'top',required:true,width:'100%'"})
-
     (build-field
       {:id "edate"
        :name "edate"
        :class "easyui-datebox"
        :prompt "mm/dd/yyyy"
        :data-options "label:'End Date:',labelPosition:'top',required:false,width:'100%'"})
-
     (build-field
       {:id "cost"
        :name "cost"
        :class "easyui-numberbox"
        :prompt "Cost of this item..."
        :data-options "label:'Cost:',labelPosition:'top',min:1,precision:2,prefix:'$',width:'100%'"})
-
     (build-field
       {:id "category_id"
        :name "category_id"
@@ -49,7 +44,6 @@
                      method:'GET',
                      required:true,
                      width:'100%'"})
-
     (build-field
       {:id "levels_id"
        :name "levels_id"

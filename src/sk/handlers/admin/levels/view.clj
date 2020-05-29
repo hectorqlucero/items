@@ -5,7 +5,6 @@
                                     build-dialog
                                     build-dialog-buttons
                                     build-field
-                                    build-radio-buttons
                                     build-toolbar]]))
 
 (def dialog-fields
@@ -17,7 +16,6 @@
        :class "easyui-textbox"
        :prompt "Level ex. Level 1"
        :data-options "label:'Level:',labelPosition:'top',required:true,width:'100%'"})
-
     (build-field
       {:id "weight"
        :name "weight"
@@ -27,16 +25,16 @@
 
 (defn levels-view [title]
   (list
-   (anti-forgery-field)
-   (build-table
-     title 
-     "/admin/levels" 
-     (list
-       [:th {:data-options "field:'description',sortable:true,fixed:true,width:100"} "Level"]
-       [:th {:data-options "field:'weight',sortable:true,width:100"} "Weight"]))
-   (build-toolbar)
-   (build-dialog title dialog-fields)
-   (build-dialog-buttons)))
+    (anti-forgery-field)
+    (build-table
+      title 
+      "/admin/levels" 
+      (list
+        [:th {:data-options "field:'description',sortable:true,fixed:true,width:100"} "Level"]
+        [:th {:data-options "field:'weight',sortable:true,width:100"} "Weight"]))
+    (build-toolbar)
+    (build-dialog title dialog-fields)
+    (build-dialog-buttons)))
 
 (defn levels-scripts []
   (include-js "/js/grid.js"))

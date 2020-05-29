@@ -2,8 +2,7 @@
   (:require [sk.models.crud :refer [db Query]]
             [sk.models.util :refer [get-session-id]]
             [sk.layout :refer [application]]
-            [sk.handlers.wishlist.view :refer [wishlist-view
-                                                  wishlist-scripts]]))
+            [sk.handlers.wishlist.view :refer [wishlist-view wishlist-scripts]]))
 
 (def head-sql
   "

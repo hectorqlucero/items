@@ -1,6 +1,5 @@
 (ns sk.handlers.registrar.view
-  (:require [hiccup.page :refer [include-js]]
-            [sk.models.util :refer [build-form
+  (:require [sk.models.util :refer [build-form
                                     build-field 
                                     build-button]]))
 
