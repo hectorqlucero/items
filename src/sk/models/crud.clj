@@ -36,7 +36,7 @@
          :enableQueryTimeouts             false
          :zeroDateTimeBehavior            "CONVERT_TO_NULL"}) ; Database connection
 
-(def SALT "897sdn9j98u98kj")                                ; encryption salt for DB
+(def SALT "897sdn9j98u98kjz")                                ; encryption salt for DB
 
 (def KEY "897sdn9j98u98kjz")
 
