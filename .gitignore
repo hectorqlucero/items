@@ -7,6 +7,8 @@ config.clj
 profiles.clj
 pom.xml
 pom.xml.asc
+*.calva
+*.clj-kondo
 *.jar
 *.class
 /.lein-*
