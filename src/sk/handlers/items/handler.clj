@@ -29,7 +29,7 @@
     (str head body foot)))
 
 (defn items
-  [request]
+  [_]
   (try
     (let [title "Items"
           ok (get-session-id)
@@ -40,7 +40,7 @@
     (catch Exception e (.getMessage e))))
 
 (defn pending-items
-  [request]
+  [_]
   (try
     (let [title "Items"
           ok (get-session-id)
@@ -51,7 +51,7 @@
     (catch Exception e (.getMessage e))))
 
 (defn completed-items
-  [request]
+  [_]
   (try
     (let [title "Items"
           ok (get-session-id)

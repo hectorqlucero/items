@@ -29,7 +29,7 @@
     (str head body foot)))
 
 (defn wishlist
-  [request]
+  [_]
   (try
     (let [title "Wishlist"
           ok (get-session-id)
@@ -40,7 +40,7 @@
     (catch Exception e (.getMessage e))))
 
 (defn pending-wishlist
-  [request]
+  [_]
   (try
     (let [title "Wishlist"
           ok (get-session-id)
@@ -51,7 +51,7 @@
     (catch Exception e (.getMessage e))))
 
 (defn completed-wishlist
-  [request]
+  [_]
   (try
     (let [title "Wishlist"
           ok (get-session-id)

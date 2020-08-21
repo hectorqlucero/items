@@ -30,7 +30,7 @@
     (str head body foot)))
 
 (defn emergencies
-  [request]
+  [_]
   (try
     (let [title "Emergencies"
           ok (get-session-id)
@@ -41,7 +41,7 @@
     (catch Exception e (.getMessage e))))
 
 (defn pending-emergencies
-  [request]
+  [_]
   (try
     (let [title "Emergencies"
           ok (get-session-id)
@@ -52,7 +52,7 @@
     (catch Exception e (.getMessage e))))
 
 (defn completed-emergencies
-  [request]
+  [_]
   (try
     (let [title "Emergencies"
           ok (get-session-id)

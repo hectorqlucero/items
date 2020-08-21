@@ -1,5 +1,7 @@
 (ns sk.models.cdb
-  (:require [sk.models.crud :refer :all]
+  (:require [sk.models.crud :refer [db
+                                    Query!
+                                    Insert-multi]]
             [noir.util.crypt :as crypt]))
 
 
@@ -149,9 +151,10 @@
   ")
 ;; End items
 
-(defn create-database []
+(defn create-database
   "Create database tables and default admin users
   Note: First create the database on MySQL with any client"
+  []
   (Query! db users-sql)
   (Query! db levels-sql)
   (Query! db category-sql)
@@ -159,8 +162,9 @@
   (Query! db emergencies-sql)
   (Query! db items-sql))
 
-(defn reset-database []
+(defn reset-database
   "Removes existing tables and re-creates them"
+  []
   (Query! db "DROP table IF EXISTS users")
   (Query! db "DROP table IF EXISTS levels")
   (Query! db "DROP table IF EXISTS category")
@@ -174,8 +178,9 @@
   (Query! db emergencies-sql)
   (Query! db items-sql))
 
-(defn migrate []
+(defn migrate
   "Migrate by the seat of my pants"
+  []
   (Query! db "DROP table IF EXISTS levels")
   (Query! db "DROP table IF EXISTS category")
   (Query! db levels-sql)

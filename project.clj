@@ -4,7 +4,7 @@
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.1"]
-                 [compojure "1.6.1" :exclusions [commons-codec]]
+                 [compojure "1.6.2" :exclusions [commons-codec]]
                  [hiccup "1.0.5"]
                  [lib-noir "0.9.9"]
                  [com.draines/postal "2.0.3"]
@@ -17,7 +17,7 @@
                  [date-clj "1.0.1"]
                  [org.clojure/java.jdbc "0.7.11"]
                  [org.clojure/data.codec "0.1.1"]
-                 [mysql/mysql-connector-java "8.0.20"]
+                 [mysql/mysql-connector-java "8.0.21"]
                  [ring/ring-core "1.8.1" :exclusions [ring/ring-codec commons-logging commons-codec]]]
   :main ^:skip-aot sk.core
   :aot [sk.core]

@@ -95,7 +95,7 @@
     (include-js "/js/main.js")))
 
 (defn application [title ok js & content]
-  (html5 {:ng-app (:site-name config) :lang "en"}
+  (html5 {:ng-app (if title title (:site-name config)) :lang "en"}
          [:head
           [:title (:site-name config)]
           [:meta {:charset "UTF-8"}]

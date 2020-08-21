@@ -1,17 +1,15 @@
 (ns sk.core
-  (:require [compojure.core :refer :all]
+  (:require [compojure.core :refer [defroutes routes]]
             [compojure.handler :as handler]
             [compojure.route :as route]
             [noir.response :refer [redirect]]
             [noir.session :as session]
             [ring.adapter.jetty :as jetty]
-            [ring.middleware.defaults :refer :all]
-            [ring.middleware.multipart-params :refer :all]
+            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
+            [ring.middleware.multipart-params :refer [wrap-multipart-params]]
             [ring.middleware.reload :as reload]
-            [ring.middleware.session :refer :all]
-            [ring.middleware.session.cookie :refer :all]
-            [ring.util.anti-forgery :refer :all]
-            [sk.models.crud :refer [config KEY]]
+            [ring.middleware.session :refer [wrap-session]]
+            [sk.models.crud :refer [config]]
             [sk.routes :refer [open-routes]]
             [sk.proutes :refer [proutes]])
   (:gen-class))
